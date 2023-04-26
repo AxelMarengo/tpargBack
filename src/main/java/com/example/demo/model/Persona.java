@@ -14,16 +14,20 @@ public class Persona {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
 
-    private Long id;
+    private int id;
     private String nombre;
     private String apellido;
+    private String img;
+    private String descripcion;
     
     public Persona(){
     }    
     
-    public Persona(Long id, String nombre, String apellido){
+    public Persona(int id, String nombre, String apellido, String img, String descripcion){
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
+        this.img = img;
+        this.descripcion = descripcion;
     }    
 }

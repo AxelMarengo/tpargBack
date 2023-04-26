@@ -22,28 +22,23 @@ public class CPersona {
     @Autowired
     private IPersonaService persoServ;
     
-    @PostMapping ("/new/persona")
+    @PostMapping ("/persona/new")
     public void agregarPersona(@RequestBody Persona pers) {
         persoServ.crearPersona(pers);
     }
-    
-    @GetMapping ("/hola")
-    public String decirHola() {
-        return "Hola mundo";
-    }
-            
-    @GetMapping ("/ver/personas")
+       
+    @GetMapping ("/persona/verlista")
     @ResponseBody
     public List<Persona> verPersonas(){
         return persoServ.verPersonas();
     }
     
-    @GetMapping ("/ver/persona")
-    public Persona verPersona(){
-        return persoServ.verPersona((long)54);
+    @GetMapping ("/persona/veruna")
+    public Persona buscarPersona(){
+        return persoServ.buscarPersona((long)54);
     }
     
-    @DeleteMapping ("/delete/persona/{id}")
+    @DeleteMapping ("/persona/delete/{id}")
     public void borrarPersona (@PathVariable Long id) {
         persoServ.borrarPersona(id);
     }

@@ -5,7 +5,7 @@ import java.util.List;
 
 
 public interface IPersonaService {
-    
+
     public List<Persona> verPersonas ();
     
     public void crearPersona (Persona per);
@@ -13,4 +13,6 @@ public interface IPersonaService {
     public void borrarPersona (Long id);
     
     public Persona buscarPersona (Long id);
+
+    public Persona verPersona(long l);
 }

@@ -1,5 +1,6 @@
 package com.example.demo.service;
 
+
 import com.example.demo.model.Persona;
 import com.example.demo.repository.PersonaRepository;
 import java.util.List;
@@ -31,6 +32,11 @@ public class PersonaService implements IPersonaService {
     @Override
     public Persona buscarPersona(Long id) {
         return persoRepo.findById(id).orElse(null);
+    }
+
+    @Override
+    public Persona verPersona(long id) {
+        return persoRepo.getReferenceById(id);
     }
     
 }
