@@ -34,9 +34,4 @@ public class PersonaService implements IPersonaService {
         return persoRepo.findById(id).orElse(null);
     }
 
-    @Override
-    public Persona verPersona(long id) {
-        return persoRepo.getReferenceById(id);
-    }
-    
 }
