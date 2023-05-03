@@ -14,14 +14,14 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = {"*","http://localhost:4200/","http://localhost:4200/nuevaedu"})
 
 public class CEducacion {
     
     @Autowired
     private EducacionService eduServ;
     
-    @PostMapping ("/educacion/new")
+    @PostMapping ("/educacion/create")
     public void agregarEducacion(@RequestBody Educacion edu) {
         eduServ.crearEducacion(edu);
     }
@@ -30,11 +30,6 @@ public class CEducacion {
     @ResponseBody
     public List<Educacion> verEducaciones(){
         return eduServ.verEducaciones();
-    }
-    
-    @GetMapping ("/educacion/veruna")
-    public Educacion buscarEducacion(){
-        return eduServ.buscarEducacion((long)1);
     }
     
     @DeleteMapping ("/educacion/delete/{id}")
