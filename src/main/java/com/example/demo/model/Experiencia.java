@@ -1,16 +1,16 @@
 package com.example.demo.model;
-
 import jakarta.persistence.Entity;
+import lombok.Getter;
+import lombok.Setter;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import lombok.Getter;
-import lombok.Setter;
 
 @Getter @Setter
 @Entity
-public class Educacion {
-        
+
+public class Experiencia {
+            
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
 
@@ -18,11 +18,11 @@ public class Educacion {
     private String nombre;
     private String descripcion;
     
-    public Educacion(){
+    public Experiencia(){
     }    
     
-    public Educacion(String nombre,String descripcion){
+    public Experiencia(String nombre,String descripcion){
         this.nombre = nombre;
         this.descripcion = descripcion;
-    }    
+    }
 }
