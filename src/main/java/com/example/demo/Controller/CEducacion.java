@@ -30,7 +30,7 @@ public class CEducacion {
         eduServ.save(edu);
     }
     
-    @GetMapping("educacion/detail/{id}")
+    @GetMapping("/educacion/detail/{id}")
     public ResponseEntity<Educacion> getById(@PathVariable("id")int id){
 
         
@@ -49,7 +49,7 @@ public class CEducacion {
         eduServ.borrarEducacion(id);
     }
        
-    @PutMapping("educacion/update/{id}")
+    @PutMapping("/educacion/update/{id}")
     public ResponseEntity<?> update(@PathVariable("id") int id, @RequestBody dtoEducacion dtoeducacion){
         
         Educacion educacion = eduServ.getOne(id).get();

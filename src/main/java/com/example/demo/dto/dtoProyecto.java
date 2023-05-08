@@ -1,15 +1,15 @@
 package com.example.demo.dto;
 
-public class dtoEducacion {
+public class dtoProyecto {
 
     private String nombre;
 
     private String descripcion;
 
-    public dtoEducacion() {
+    public dtoProyecto() {
     }
 
-    public dtoEducacion(String nombre, String descripcion) {
+    public dtoProyecto(String nombre, String descripcion) {
         this.nombre = nombre;
         this.descripcion = descripcion;
     }

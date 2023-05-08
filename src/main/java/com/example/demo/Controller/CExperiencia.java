@@ -30,7 +30,7 @@ public class CExperiencia {
         expServ.save(exp);
     }
     
-    @GetMapping("experiencia/detail/{id}")
+    @GetMapping("/experiencia/detail/{id}")
     public ResponseEntity<Experiencia> getById(@PathVariable("id")int id){
 
         
@@ -49,7 +49,7 @@ public class CExperiencia {
         expServ.borrarExperiencia(id);
     }
        
-    @PutMapping("experiencia/update/{id}")
+    @PutMapping("/experiencia/update/{id}")
     public ResponseEntity<?> update(@PathVariable("id") int id, @RequestBody dtoExperiencia dtoexperiencia){
         
         Experiencia experiencia = expServ.getOne(id).get();
