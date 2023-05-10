@@ -16,12 +16,12 @@ public class Skill {
 
     private int id;
     private String nombre;
-    private String descripcion;
+    private int descripcion;
     
     public Skill(){
     }    
     
-    public Skill(String nombre,String descripcion){
+    public Skill(String nombre,int descripcion){
         this.nombre = nombre;
         this.descripcion = descripcion;
     }    

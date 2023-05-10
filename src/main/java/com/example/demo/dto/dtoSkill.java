@@ -4,12 +4,12 @@ public class dtoSkill {
     
     private String nombre;
 
-    private String descripcion;
+    private int descripcion;
 
     public dtoSkill() {
     }
 
-    public dtoSkill(String nombre, String descripcion) {
+    public dtoSkill(String nombre, int descripcion) {
         this.nombre = nombre;
         this.descripcion = descripcion;
     }
@@ -22,11 +22,11 @@ public class dtoSkill {
         this.nombre = nombre;
     }
 
-    public String getDescripcion() {
+    public int getDescripcion() {
         return descripcion;
     }
 
-    public void setDescripcion(String descripcion) {
+    public void setDescripcion(int descripcion) {
         this.descripcion = descripcion;
     }
     
