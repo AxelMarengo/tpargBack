@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@CrossOrigin(origins = "https://argprograma-f2d81.firebaseapp.com/")
+@CrossOrigin(origins = "https://argprograma-f2d81.firebaseapp.com")
 
 public class CSkill {
     
